@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Spoon-Knife</title>
+  <title>Urban Airship - Web Push Notification Test</title>
     <script type="text/javascript">
       // 86acbd31cd7c09cf30acb66d2fbedc91daa48b86:1647396067.966083
       !function(n,r,e,t,c){var i,o="Promise"in n,u={then:function(){return u},catch:function(n){
@@ -20,12 +20,18 @@
 </head>
 
 <body>
+<h1>Urban Airship - Web Push Notification Test</h1>
 <p>
-  Fork me? Fork you, @octocat!
+  <button type="button" id="register">Register</button>
 </p>
-<p>
-  Sean made a change
-</p>
+
+<script>
+  document.getElementById("register").addEventListener("click", () => {
+    UA.then(sdk => {
+      sdk.register(); // Returns Channel object
+    })
+  })
+</script>
 
 </body>
 </html>
